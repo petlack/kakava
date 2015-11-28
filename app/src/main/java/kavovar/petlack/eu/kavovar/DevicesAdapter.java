@@ -36,6 +36,9 @@ public class DevicesAdapter extends ArrayAdapter<BluetoothDevice> {
         else if ("HC-05".equals(device.getName())) {
             tvName.setText("Ziarovka");
         }
+        else {
+            tvName.setText(device.getName());
+        }
 
         tvMac.setText(device.getAddress());
 

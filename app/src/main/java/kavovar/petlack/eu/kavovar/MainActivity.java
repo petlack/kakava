@@ -27,6 +27,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Set;
 
 import fr.castorflex.android.smoothprogressbar.SmoothProgressBar;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements PairedDevicesAdap
             @Override
             public void handleMessage(Message msg) {
                 //Log.d(TAG, msg.toString());
+                //Log.d(TAG, Arrays.toString((byte[]) msg.obj));
                 if (msg.what == BluetoothChat.MESSAGE_STATE_CHANGE) {
                     if (msg.arg1 == BluetoothChatService.STATE_CONNECTED) {
                         adapter.setConnectedDevice(pairedDevice);

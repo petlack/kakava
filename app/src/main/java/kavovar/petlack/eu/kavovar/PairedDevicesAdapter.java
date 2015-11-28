@@ -55,6 +55,9 @@ public class PairedDevicesAdapter extends ArrayAdapter<BluetoothDevice> {
         else if ("HC-05".equals(device.getName())) {
             tvName.setText("Ziarovka");
         }
+        else {
+            tvName.setText(device.getName());
+        }
 
         if (device.equals(connectedDevice)) {
             action.setImageResource(R.drawable.ic_flash_off_black_48dp);
